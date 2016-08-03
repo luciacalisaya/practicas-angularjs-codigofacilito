@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CustomDirective">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="autocomplete-jquery-ui.structure.css">
+	<link rel="stylesheet" href="styles.css">
+	<title>Segunda directiva con AngularJS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="autocomplete-jquery-ui.js"></script>
+	<script src="app.js"></script>
+</head>
+<body ng-controller="AppCtrl">
+	
+	<input type="text" my-autocomplete="repos" placeholder="Buscar repositorio">
+	
+	<ul class="no-list">
+		<li ng-repeat="repo in posts" ng-hide="main_repo && main_repo != repo.name">
+			<div class="circular" back-img="{{repo.owner.avatar_url}}"></div>
+			<h1 class="inline-block">{{repo.full_name}}</h1>
+		</li>
+	</ul>
+	
+	<a ng-click="main_repo = null">Limpiar</a>
+</body>
+</html>

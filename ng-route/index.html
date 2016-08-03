@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CustomDirective">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="autocomplete-jquery-ui.structure.css">
+	<title>Más directivas con AngularJS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+	<script src="https://code.angularjs.org/1.4.1/angular-route.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="autocomplete-jquery-ui.js"></script>
+	<script src="app.js"></script>
+	<script src="directives.js"></script>
+	<script src="controllers.js"></script>
+	<style>
+		.circular {
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+			display: inline-block;
+		}
+
+		.no-list li {
+			list-style-type: none;
+		}
+
+		body, html{
+			text-align: center;
+			background-color:#eee;
+			margin:0px;
+		}
+	</style>
+</head>
+<body> 
+<!-- ng-controller no es necesario porque el routing ya está diciendo quién es el controller -->
+	<div ng-view></div>
+</body>
+</html>

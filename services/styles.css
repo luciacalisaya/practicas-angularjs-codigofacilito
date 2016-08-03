@@ -1,0 +1,43 @@
+* {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.main {
+	width: 600px;
+	margin: 10px auto;
+	padding: 10px 20px;
+	border-radius: 5px;
+	background: #cb60b3; /* Old browsers */
+	background: -moz-linear-gradient(45deg,  #cb60b3 0%, #ad1283 45%, #de47ac 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#cb60b3), color-stop(45%,#ad1283), color-stop(100%,#de47ac)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(45deg,  #cb60b3 0%,#ad1283 45%,#de47ac 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(45deg,  #cb60b3 0%,#ad1283 45%,#de47ac 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(45deg,  #cb60b3 0%,#ad1283 45%,#de47ac 100%); /* IE10+ */
+	background: linear-gradient(45deg,  #cb60b3 0%,#ad1283 45%,#de47ac 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb60b3', endColorstr='#de47ac',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+h1 {
+	color: #EAE80B;
+	text-align: center;
+}
+
+.field {
+	margin:20px 10px;
+}
+
+form {
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+
+#submit, button {
+	background-color: #EAE80B;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+button {
+	margin:auto 250px;
+}

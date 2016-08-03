@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CustomDirective">
+<head>
+	<meta charset="UTF-8">
+	<title>Ng-src y Ng-cloak</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+	<script src="app.js"></script>
+	<style>
+		.circular {
+			border-radius: 50%;
+			width:100px;
+			height:100px;
+			display:inline-block;
+		}
+	</style>
+</head>
+<body ng-controller="AppCtrl">
+	<ul class="no-list" ng-cloak>
+		<li ng-repeat="repo in repos">
+			<!-- Produce un error 404 porque el navegador cree que es una ruta y no javascript -->
+			<!-- <img src="{{repo.owner.avatar_url}}"> -->
+
+			<!-- Con directiva de Angular, se obtiene la misma imagen, con mayor performance -->
+			<div class="circular" back-img="{{ repo.owner.avatar_url }}"></div>
+			<h1>{{ repo.name }}</h1>
+
+		</li>
+	</ul>
+</body>
+</html>

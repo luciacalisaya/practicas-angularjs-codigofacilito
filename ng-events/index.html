@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>Mi primera página con AngularJS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+	<style>
+	.hover {
+		background-color: rgb(200,50,50);
+	}
+	</style>
+</head>
+<body>
+<!-- A través de directivas se especifica a qué evento se está definiendo -->
+	<button ng-mouseover="bandera = true" ng-mouseout="bandera = false">
+		Hover me
+	</button> 
+	<span ng-show="bandera">&lt;- arriba del botón</span>
+	<span ng-hide="bandera">&lt;- afuera del botón</span>
+	<p>
+		{{bandera | json}}
+	</p>
+
+	<button ng-click="flag = !flag">
+		Haz click
+	</button> <span ng-show="flag">&lt;- Hiciste click</span>
+
+<br>
+<!-- Con ng-class podemos asignar una clase a partir del valor de una variable -->
+<!-- Si el valor es verdadero, asigna la clase -->
+	<button ng-click="banderaDos = !banderaDos" ng-class="{'hover': banderaDos}">
+		Haz click
+	</button> <span ng-show="banderaDos">Botón rojo!</span>
+</body>
+</html>
